@@ -221,7 +221,6 @@ strong {
   flex-direction: column;
   /* scroll */
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 @media screen and (max-width: 950px) {
   .left-menu,.w3container__right {
@@ -250,7 +249,7 @@ strong {
 }
 
 .w3container{
-  width: 85%;
+  width: 100%;
   display: flex;
   flex-direction: column;
  
@@ -389,7 +388,7 @@ strong {
 }
 /* my lerning */
 .my-learning__img {
-  width: 840px;
+  max-width: 840px;
 }
 .my-learning__description {
   line-height: 40px;
@@ -430,7 +429,8 @@ strong {
   color: #DDD;
   background: url(./images/footer.png) no-repeat center ;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
+  
 }
 
 .footer__logo {
@@ -442,11 +442,11 @@ strong {
   /* justify-content: space-evenly; */
   text-align: center;
   flex: row wrap;
+  margin: 0px 40px;
 }
 .footer__feature {
   display: flex;
-  flex: row wrap;
-  
+  flex-flow: row nowrap;
 
 }
 .footer__feature .feature__link{
@@ -461,10 +461,10 @@ strong {
   width: 100%;
   justify-content: space-between;
   margin-bottom: 40px;
+  margin-left: 40px;
+
 }
-.footer-content {
-  margin: 40px 80px 300px;
-}
+
 .type{
   display: flex;
   flex-flow: column nowrap;
@@ -488,10 +488,14 @@ strong {
   color: white;
   display: flex;
   justify-content: space-between;
+  margin-left: 40px;
+
 }
 .footer__text a{
-  color: white;
-  
+  color: white; 
+}
+.footer__text{
+  margin-left: 40px;
 }
 .footer__some a {
   color: white;
@@ -503,3 +507,8 @@ strong {
 }
 
 
+@media screen and (max-width: 1295px) {
+  .footer__items {
+    flex-direction: column;
+  }
+}
