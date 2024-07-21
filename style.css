@@ -130,10 +130,6 @@ strong {
   .right-item a:first-child {
     display: none;
   }
-  .w3container__right{
-    min-width: 160px;
-
-  }
 }
 @media screen and (max-width: 1180px) {
   .right-item a:nth-child(2) {
@@ -220,11 +216,25 @@ strong {
   display: flex;
   flex-direction: column;
   /* scroll */
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
   .left-menu,.w3container__right {
     display: none;
+  }
+  .footer__feature, .footer__lesson {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__text{
+    width: 80%;
+    text-align: center;
+    font-size: small;
+  }
+  .footer__some {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 /* left container */
@@ -427,10 +437,10 @@ strong {
 .w3container__footer{
   margin-top: 80px;
   color: #DDD;
-  background: url(./images/footer.png) no-repeat center ;
+  background: url(./images/footer.png) repeat center ;
   display: flex;
   flex-direction: column;
-  
+  height: auto;
 }
 
 .footer__logo {
@@ -439,14 +449,12 @@ strong {
 }
 .footer__items{
   display: flex;
-  /* justify-content: space-evenly; */
   text-align: center;
-  flex: row wrap;
+  flex-flow: row wrap;
   margin: 0px 40px;
 }
 .footer__feature {
   display: flex;
-  flex-flow: row nowrap;
 
 }
 .footer__feature .feature__link{
@@ -458,8 +466,7 @@ strong {
 }
 .footer__lesson {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 40px;
   margin-left: 40px;
 
@@ -468,12 +475,12 @@ strong {
 .type{
   display: flex;
   flex-flow: column nowrap;
-  
 }
 .type__title{
   color: #DDD;
   font-weight: 500;
   font-size: 20px;
+  width: 100%;
 }
 .type a{ 
   color: #DDD;
@@ -489,7 +496,6 @@ strong {
   display: flex;
   justify-content: space-between;
   margin-left: 40px;
-
 }
 .footer__text a{
   color: white; 
